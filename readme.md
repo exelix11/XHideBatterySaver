@@ -1,5 +1,5 @@
 # XHideBatterySaver
-This simple XPosed module removes the battery saver color from the status bar \
+This simple XPosed module removes the battery saver color from the status bar 
 
 ## Compatibility
 I tested this only on my phone running resurrection remix 6.1 (android 8.1). \
