@@ -19,8 +19,10 @@ public class XHideBatterySaverClass implements IXposedHookLoadPackage  {
                 new XC_MethodHook() {
                     @Override
                     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                        int targetVal = XposedHelpers.getIntField(param.thisObject,"mTransparent");
-                        XposedHelpers.setIntField(param.thisObject,"mPowerSaveWarning",targetVal);
+						XposedHelpers.setIntField(param.thisObject,"mPowerSaveWarning",0);
+						// Or use value from another field : 
+                        //int targetVal = XposedHelpers.getIntField(param.thisObject,"mTransparent");
+                        //XposedHelpers.setIntField(param.thisObject,"mPowerSaveWarning",targetVal);
                         XposedBridge.log("XHideBatterySaverClass: Patched ! ");
                     }
                 });
